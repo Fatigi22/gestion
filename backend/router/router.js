@@ -43,7 +43,7 @@ router.post("/post", (req, res) => {
 });
 
 // DELETE request to remove data by ID
-router.delete("/:id", (req, res) => {
+router.delete("/", (req, res) => {
     const id = req.params.id;
     Db.deleteOne({ _id: id })
         .then(() => {
